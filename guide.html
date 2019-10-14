@@ -415,14 +415,14 @@ var state = {
         state.transientMarker.remove();
     }
 }
-mapboxgl.accessToken = 'pk.eyJ1IjoicGV0ZXJxbGl1IiwiYSI6ImNqdHJqdG92OTBkNTg0M3BsNDY0d3NudWcifQ.0z4ov_viFE-yBMSijQpOhQ';
+mapboxgl.accessToken = 'pk.eyJ1IjoiY2VpaWEiLCJhIjoiY2lsMTE0aG9lMmRzenVnbTN0MWNsNW05MyJ9.XjKQqu9fpea2zovIcy5uZg';
 var embed = window.location.href.indexOf('embed=true') !==-1;
 
 var map = new mapboxgl.Map({
     hash: false,
     scrollZoom: !embed,
     container: 'map', // container id
-    style: 'mapbox://styles/peterqliu/cj5k2tj0d16ul2rmlwyw00gth', //stylesheet location
+    style: 'mapbox://styles/ceiia/ck1lw77zn024r1co1jpgb53am', //stylesheet location
     center: state.truckLocation, // starting position
     zoom: 13 // starting zoom
 });
@@ -432,7 +432,7 @@ if(embed) map.addControl(new mapboxgl.NavigationControl());
 
 var driver = new mapboxgl.Map({
     container: 'nav', // container id
-    style: 'mapbox://styles/peterqliu/cj5k3b63b176l2snvd7n6by90', //stylesheet location
+    style: 'mapbox://styles/ceiia/ck1lw77zn024r1co1jpgb53am', //stylesheet location
     center: state.truckLocation,
     pitch:60,
     interactive: false,
