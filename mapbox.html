@@ -1,0 +1,95 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<title>Display driving directions</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.css' rel='stylesheet' />
+<style>
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+ 
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css' type='text/css' />
+<div id='map'></div>
+ 
+ 	<script>
+  	mapboxgl.accessToken = 'pk.eyJ1IjoiY2VpaWEiLCJhIjoiY2lsMTE0aG9lMmRzenVnbTN0MWNsNW05MyJ9.XjKQqu9fpea2zovIcy5uZg';
+
+  	// This adds the map to your page
+  	var map = new mapboxgl.Map({
+      // container id specified in the HTML
+      container: 'map',
+      // style URL
+      style: 'mapbox://styles/ceiia/ck1lw77zn024r1co1jpgb53am',
+      // initial position in [long, lat] format
+      center: [-8.683905, 41.172653],
+      // initial zoom
+      zoom: 12,
+
+       // bearing in degrees
+    });
+
+map.on('load', function() {
+// Add a GeoJSON source containing place coordinates and information.
+
+map.flyTo({
+center: [
+-8.683905, 41.172653],
+zoom: 18,
+pitch: 80, // pitch in degrees
+bearing: 10,
+speed: 1.5, // make the flying slow
+curve: 1, // change the speed at which it zooms out
+easing: function (t) { return t; }
+}); 
+
+
+//map.rotateTo(180, { duration: 10000 });
+
+});
+
+map.on('click', function() {
+// Add a GeoJSON source containing place coordinates and information.
+
+
+map.rotateTo(180, { duration: 10000 });
+
+});
+
+// set the bounds of the map
+var bounds =
+[
+[-10.2942, 36.6243], // Southwest coordinates
+[-5.8887, 42.1471]  // Northeast coordinates
+]
+
+map.setMaxBounds(bounds);
+
+// initialize the map canvas to interact with later
+var canvas = map.getCanvasContainer();
+
+// an arbitrary start will always be the same
+// only the end or destination will change
+var start = [-8.683905, 41.172653];
+
+map.addControl(new MapboxDirections({
+accessToken: mapboxgl.accessToken
+,  
+
+	unit: 'metric',
+  	profile: 'mapbox/driving',
+
+  	
+}), 'top-left');
+</script>
+ 
+</body>
+</html>
