@@ -5,22 +5,28 @@
 
 		<meta charset="utf-8">
 
-		<title>Buddy Mi Pad 4 v0.1 - Proto.io</title>
+		<title>2x Buddy Mi Pad 4 v0.1 - Proto.io</title>
 
 		
 			<meta name="HandheldFriendly" content="True">
-			<meta name="MobileOptimized" content="1920"> 
-
+			<meta name="MobileOptimized" content="960"> 
+		<script type="text/javascript" src="pwabuilder-sw-register.js"></script>
+		<script type="text/javascript" src="pwabuilder-sw.js"></script>
 			
   <link rel="manifest" href="manifest.webmanifest">			
 			
-			<meta name="viewport" content="minimum-scale=1.00, maximum-scale=1.00, initial-scale=1.00, user-scalable=no, shrink-to-fit=yes" />
+			<meta name="viewport" content="minimum-scale=1.00, maximum-scale=1.00, initial-scale=1.00, user-scalable=no, shrink-to-fit=no" />
 
 			
 
 			<meta name="format-detection" content="telephone=no">
 
 
+			
+				<meta name="mobile-web-app-capable" content="yes">
+				
+				<link rel="icon" sizes="192x192" href="./assets/branding/android-icon-hires.png">
+				<link rel="icon" sizes="128x128" href="android-icon.png">
 			
 
 			<link rel="shortcut icon" href="apple-touch-icon.png">
@@ -32,31 +38,27 @@
 
 			
 		    <script type="text/javascript" src="./scripts/plugins/jquery/jquery.js"></script>
-  
-		
-		<script type="text/javascript" src="pwabuilder-sw-register.js"></script>
-		<script type="text/javascript" src="pwabuilder-sw.js"></script>
+
 			
 				<link rel="stylesheet" href="./stylesheets/player-export.css" />
 				<script type="text/javascript" src="./scripts/player-export.js"></script>
 			
 
-		
-		
+			
 			<script type="text/javascript" src="./libraries/common/components.js"></script> 
 			<link type="text/css" rel="Stylesheet" href="./libraries/common/components.1.00.css" /> 
 
 			
-					<script type="text/javascript" src="./libraries/generic2/components.js"></script> 
-					<link type="text/css" rel="Stylesheet" href="./libraries/generic2/components.1.00.css" /> 
+					<script type="text/javascript" src="./libraries/material/components.js"></script> 
+					<link type="text/css" rel="Stylesheet" href="./libraries/material/components.1.00.css" /> 
 				
 				<script type="text/javascript" src="./data/data.js"></script> 
 			
 
 		<style>
-			body { width: 1920px; height: 1200px; }
-			.landscape, .landscape .prx-page { min-height: 1200px; }
-			.portrait, .portrait .prx-page { min-height: 1920px; }
+			body { width: 960px; height: 600px; }
+			.landscape, .landscape .prx-page { min-height: 960px; }
+			.portrait, .portrait .prx-page { min-height: 600px; }
 		</style>
 
 		<script type="text/javascript">
@@ -74,14 +76,14 @@
 			prx.nodejsassetsserver.subdomainprefix = "https://at";
 			prx.nodejsassetsserver.maxsubdomains = "20";
 
-			prx.device_library = 'generic2';
+			prx.device_library = 'material';
 			prx.devices[prx.device] = {
 				name: prx.device
 				,defaultOrientation: 'landscape'
 				,portrait_applies: 1 //new
-				,portrait: [1200,1920]
+				,portrait: [600,960]
 				,landscape_applies: 1 //new
-				,landscape: [1920,1200]
+				,landscape: [960,600]
 				,allow_orientation_change: 1 //new
 				,statusbar_skin: 'default' // new
 				,statusbarheightportrait: 0
@@ -89,19 +91,19 @@
 				,navigationbar_skin: 'default' //new
 				,navigationbarheightportrait: 0
 				,navigationbarheightlandscape: 0
-				,normalportrait: [1200,1920]
-				,normallandscape: [1920,1200]
-				,device_s3bucket: '7744224b-1c4c-41cb-a77e-c408d8b12678'
+				,normalportrait: [600,960]
+				,normallandscape: [960,600]
+				,device_s3bucket: '3b05779f-bc28-4911-9860-6bac2a67ddd4'
 				,dpr: '1.00'
 				,deviceType: "default"
 				,showiPhoneXNotch: false
 				,appleWatchRoundedCorners: false
 				,scrollType: "default"
 				,initialscale: 1.00
-				
+				,targetdensitydpi: "device-dpi"
 			}
 
-			prx.projectsettings.id = '498b6424-24e7-476b-8139-7717d71a9e65';
+			prx.projectsettings.id = '3f21b524-55ce-4847-8eb7-b729b3810238';
 			prx.projectsettings.s3b = 'brunooliveira-744081-proto';
 			prx.projectsettings.account = 'brunooliveira';
 			prx.projectsettings.statusbar = '0'; 
@@ -123,12 +125,12 @@
 			var sLinkedAssets = [];
 			
 
-			prx.csrf_token = 'C008D768560C7EBEACF94B3212C09AC92E25FC2E5526A56BC53E449361F34D96';
+			prx.csrf_token = '8988C1DB30E03E1E49046BCBC5C53E02205709598E4AA9F28FF9C89A19D1D090';
 
             
 
             
-                            prx.assetsAccessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkIjp7InVpZCI6Ii0xIiwicHJvamVjdF9pZCI6IjQ5OGI2NDI0LTI0ZTctNDc2Yi04MTM5LTc3MTdkNzFhOWU2NSJ9LCJ2IjowLCJleHAiOjE1NzEyMzg5MzcsImlhdCI6MTU3MTA1ODkzN30.hdDhQpcNTK03PcoLejUdwZMwaV7ngAjbusJbG1tBsMs";
+                            prx.assetsAccessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkIjp7InVpZCI6Ii0xIiwicHJvamVjdF9pZCI6IjNmMjFiNTI0LTU1Y2UtNDg0Ny04ZWI3LWI3MjliMzgxMDIzOCJ9LCJ2IjowLCJleHAiOjE1NzEzMzYyNzksImlhdCI6MTU3MTE1NjI3OX0.QIjSZkyPpuwHCGpdG14ybQ_iPTgTIGZZVY0jGmbdlOk";
 
 			prx.iniPlayer.iniPreLoad();
 
