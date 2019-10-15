@@ -5,8 +5,8 @@
   "background_color": "rgba(0,0,0,0)",
   "display": "fullscreen",
   "orientation": "landscape",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/BudIO/test/",
+  "start_url": "/BudIO/test/",
 	"icons": [
     {
       "src": "icons/icon-72x72.png",
