@@ -3,7 +3,7 @@
   "short_name": "buddy one",
   "theme_color": "rgba(0,0,0,0)",
   "background_color": "rgba(0,0,0,0)",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "landscape",
   "scope": "/BudIO/test/",
   "start_url": "/BudIO/test/",
