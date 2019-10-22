@@ -8,6 +8,8 @@
   <script src="./mapbox2_files/mapbox-gl.js.download"></script>
   <link href="./mapbox2_files/mapbox-gl.css" rel="stylesheet">
   <script src="./mapbox2_files/jquery.min.js.download"></script>
+  <script src='https://unpkg.com/three@0.106.2/build/three.min.js'></script>
+<script src="https://unpkg.com/three@0.106.2/examples/js/loaders/GLTFLoader.js"></script>
   <style>
   body {
     margin:0;
@@ -49,6 +51,7 @@
       center: [-8.683905, 41.172653],
       // initial zoom
       zoom: 12,
+    antialias: true // create the gl context with MSAA antialiasing, so custom layers are antialiased
   });
 
   // set the bounds of the map
