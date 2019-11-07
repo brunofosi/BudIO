@@ -5,8 +5,8 @@
   "background_color": "rgba(0,0,0,0)",
   "display": "standalone",
   "orientation": "landscape",
-  "scope": "/BudIO/07112019buddy/",
-  "start_url": "/BudIO/07112019buddy/",
+  "scope": "/BudIO/buddyone/",
+  "start_url": "/BudIO/buddyone/",
 	"icons": [
     {
       "src": "icons/icon-72x72.png",
