@@ -224,18 +224,8 @@ var customLayer = {
     // make an initial directions request that
     // starts and ends at the same location
     getRoute(start);
- map.addLayer(customLayer, 'waterway-label');
 
-map.flyTo({
-center: [
--8.680454492568968, 41.172145063135936],
-zoom: 18,
-pitch: 90, // pitch in degrees
-bearing: -58,
-speed: 0.7, // make the flying slow
-curve: 1, // change the speed at which it zooms out
-easing: function (t) { return t; }
-});
+
 
     // Add destination to the map
     map.addLayer({
